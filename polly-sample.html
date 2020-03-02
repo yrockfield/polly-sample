@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello aws polly</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+</head>
+<body>
+    <div id="titleContent">
+        <h1>AWS Pollyによるテキスト->音声変換サンプル</h1>
+    </div>
+    <div id="textToSynth">
+    <!-- <input autofocus size="23" type="text" id="textEntry" value="お疲れましたー"/> -->
+    <textarea autofocus rows="10" cols="80" id="textEntry">お疲れましたー</textarea>
+    <button class="button default" onClick="speakText()">Speak Text!</button>
+    <!-- <button v-on:click="speakText()">Speak Text!</button> -->
+    <p id="resultText">テキスト入力してボタンクリック！</p>
+</div>
+<audio id="audioPlayback" controls>
+    <source id="audioSource" type="audio/mp3" src="">
+</audio>
+ 
+<script src="lib/aws-sdk.min.js"></script>
+<script src="call-polly.js"></script>
+</body>
+</html>
